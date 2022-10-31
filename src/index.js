@@ -1,13 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import Home from './pages/Home';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import NewWorker from './pages/NewWorker';
+import NewMachine from './pages/NewMachine';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/add/worker" element={<NewWorker />} />
+        <Route path="/add/machine" element={<NewMachine />} />
+      </Routes>
+    </BrowserRouter>
+
   </React.StrictMode>
 );
 
