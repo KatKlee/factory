@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { useNavigate } from 'react-router-dom'
+import MachineList from '../components/machine/MachineList'
+/* import { useNavigate } from 'react-router-dom' */
 
 const NewMachine = () => {
     const [machineName, setMachineName] = useState('')
@@ -18,9 +19,10 @@ const NewMachine = () => {
         })
         const data = await response.json()
 
-        /*  if (data.state) {
-             setMachineName('')
-         } */
+        if (data.state) {
+            setMachineName('')
+        }
+
         console.log(data)
     }
 

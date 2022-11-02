@@ -1,7 +1,7 @@
-const Machine = () => {
+const Machine = ({ machine }) => {
     return (
         <>
-            <h3>Maschine</h3>
+            <h3>Maschine: {machine.name}</h3>
         </>
     )
 }
