@@ -21,6 +21,7 @@ const NewMachine = () => {
 
         if (data.state) {
             setMachineName('')
+            // Abzug von 2 Geld + posten zu /api/factory
         }
 
         console.log(data)
@@ -32,6 +33,7 @@ const NewMachine = () => {
             <h1>Neue Maschine</h1>
             <input onChange={(e) => setMachineName(e.target.value)} type="text" name="machineName" id="" value={machineName} placeholder="Maschinenname" />
             <button onClick={addMachine} >Hinzufügen</button>
+            <MachineList />
         </main>
     )
 }

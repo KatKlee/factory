@@ -1,5 +1,6 @@
-import { useEffect, useState } from 'react'
+import { /* useEffect, */ useState } from 'react'
 import { Link } from 'react-router-dom'
+import WorkerList from '../components/worker/WorkerList'
 
 const NewWorker = () => {
     const [workerName, setWorkerName] = useState('')
@@ -28,8 +29,9 @@ const NewWorker = () => {
         <main>
             <Link to="/">Zurück</Link>
             <h1>Neuer Arbeiter</h1>
-            <input onChange={(e) => setWorkerName(e.target.value)} type="text" name="workername" id="" placeholder="Mitarbeitername" />
+            <input onChange={(e) => setWorkerName(e.target.value)} type="text" name="workername" id="" value={workerName} placeholder="Mitarbeitername" />
             <button onClick={addWorker} >Hinzufügen</button>
+            <WorkerList />
         </main>
     )
 }

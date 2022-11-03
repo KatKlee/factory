@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
-import Machine from "./Machine"
+import MachineProd from "./MachineProd"
 
-const MachineList = () => {
+const MachineListProd = () => {
     const [machines, setMachines] = useState([])
 
     useEffect(() => {
@@ -14,7 +14,7 @@ const MachineList = () => {
         <>
             <h2>Maschinenliste</h2>
             {machines.map((machine, key) =>
-                <Machine
+                <MachineProd
                     key={key}
                     machine={machine}
                 />
@@ -23,4 +23,4 @@ const MachineList = () => {
     )
 }
 
-export default MachineList
+export default MachineListProd
