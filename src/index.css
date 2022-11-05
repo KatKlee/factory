@@ -16,3 +16,8 @@ code {
   display: flex;
   flex-direction: column;
 }
+
+.machineWorkerNames {
+  display: flex;
+  gap: 15px;
+}

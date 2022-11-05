@@ -12,13 +12,15 @@ const MachineListProd = () => {
 
     return (
         <>
-            <h2>Maschinenliste</h2>
-            {machines.map((machine, key) =>
-                <MachineProd
-                    key={key}
-                    machine={machine}
-                />
-            )}
+            <h2>Arbeiter zuordnen und Maschine starten…</h2>
+            {machines.map((machine, key) => {
+                return (
+                    <MachineProd
+                        key={key}
+                        machine={machine}
+                    />
+                )
+            })}
         </>
     )
 }

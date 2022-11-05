@@ -11,15 +11,15 @@ const MachineList = () => {
     }, [])
 
     return (
-        <>
-            <h2>Maschinenliste</h2>
+        <section>
+            <h2>Unsere Produktion</h2>
             {machines.map((machine, key) =>
                 <Machine
                     key={key}
                     machine={machine}
                 />
             )}
-        </>
+        </section>
     )
 }
 

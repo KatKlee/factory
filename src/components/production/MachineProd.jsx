@@ -1,3 +1,6 @@
+import { useEffect, useState } from "react"
+import SelectOptionItem from "../production/SelectOptionItem"
+
 const MachineProd = ({ machine }) => {
     const [workers, setWorkers] = useState([])
 
@@ -10,17 +13,23 @@ const MachineProd = ({ machine }) => {
     return (
         <>
             <h3>Maschine: {machine.name}</h3>
-            <select onChange={(e) => { setWorkers(e.target.value) }} name="workers" id="workers">
+            <select /* onChange= */ name="worker1" id="worker1">
                 {workers.map((worker, key) =>
-                    // DropdownItem Component mit props übergeben
-                    <option value={worker} key={key}>{worker.name}</option>
+                    <SelectOptionItem
+                        worker={worker}
+                        key={key}
+                    />
                 )}
             </select>
-            <select onChange={(e) => { setWorkers(e.target.value) }} name="workers" id="workers">
+            <select /* onChange= */ name="worker2" id="worker2">
                 {workers.map((worker, key) =>
-                    <option value={worker} key={key}>{worker.name}</option>
+                    <SelectOptionItem
+                        worker={worker}
+                        key={key}
+                    />
                 )}
             </select>
+            <button disabled>Start</button>
         </>
     )
 }

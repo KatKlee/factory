@@ -14,6 +14,7 @@ function Home() {
       })
   }, [])
 
+
   return (
     <main>
       {factoryData.map((data) => {
